@@ -1,1 +1,41 @@
 name: pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 가상 환경에 Repository를 Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Node.js를 설치
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      # 의존성 설치
+      - name: Install dependencies
+        run: npm install
+
+      # React 빌드
+      - name: Build the React
+        run: npm run build
+
+      # NCP Object Storage에 배포
+      - name: Deploy to Object Storage (NCP)
+        uses: ncloud/ncloud-sdk-action@v1
+        with:
+          command: 's3 sync ./build s3://${{ secrets.NCP_BUCKET_NAME }}/build --delete'
+        env:
+          NCLOUD_ACCESS_KEY_ID: ${{ secrets.NCP_ACCESS_KEY_ID }}
+          NCLOUD_SECRET_ACCESS_KEY: ${{ secrets.NCP_SECRET_ACCESS_KEY }}
+          NCLOUD_REGION: 'kr-standard'
+        
+        
