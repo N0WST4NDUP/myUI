@@ -11,12 +11,25 @@ jobs:
 
     steps:
 
-      # 아티팩트 다운로드
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
+      # 가상 환경에 Repository를 Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Node.js를 설치
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          name: build
-          path: ./build
+          node-version: '20'
+
+      # 의존성 설치
+      - name: Install dependencies
+        run: |
+          npm install
+
+      # 빌드
+      - name: Build the React
+        run: |
+          npm run build
 
       # NCP Credentials 설정
       - name: Set up credentials (NCP)
