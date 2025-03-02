@@ -1,0 +1,56 @@
+name: ci
+
+on: [pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # 가상 환경에 Repository를 Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Node.js를 설치
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      # 캐시된 node_modules를 사용
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      # 의존성 설치
+      - name: Install dependencies
+        run: |
+          npm install
+          npm -v
+
+      # 코드 Lint
+      - name: Lint the code
+        run: |
+          npm run lint
+
+      # 테스트
+      - name: Test the code
+        run: |
+          npm run test
+
+      # 빌드 테스트
+      - name: Build the React
+        run: |
+          npm run build
+
+      # 빌드된 결과물 아티팩트에 저장
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: ./build
