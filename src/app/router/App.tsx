@@ -26,9 +26,9 @@ export default function App(props: { disableCustomTheme?: boolean }) {
       >
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/error/*" element={<Error40X />} />
           <Route path="/profile/*" element={<MainContent />} />
           <Route path="/projects/*" element={<Latest />} />
+          <Route path="*" element={<Error40X />} />
         </Routes>
       </Container>
 
