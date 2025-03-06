@@ -22,7 +22,6 @@ export default function App(props: { disableCustomTheme?: boolean }) {
         sx={{
           my: 12,
           gap: 4,
-          border: "1px solid red",
         }}
       >
         <Routes>

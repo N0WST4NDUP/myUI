@@ -47,7 +47,6 @@ export default function NavBar() {
     <AppBar
       position="fixed"
       enableColorOnDark
-      className="navBar"
       sx={{
         boxShadow: 0,
         bgcolor: "transparent",
@@ -56,7 +55,7 @@ export default function NavBar() {
       }}
     >
       <Container maxWidth="lg">
-        <StyledToolbar variant="dense" disableGutters>
+        <StyledToolbar className="navBar" variant="dense" disableGutters>
           {/* 데스크톱 */}
           <Box
             sx={{ flexGrow: 1, display: "flex", alignItems: "center", px: 0 }}
