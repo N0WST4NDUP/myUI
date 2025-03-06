@@ -8,6 +8,7 @@ import Latest from "pages/latest/Latest";
 import Footer from "widgets/footer/Footer";
 import { Route, Routes } from "react-router-dom";
 import MainPage from "pages/main/MainPage";
+import Error40X from "pages/error/Error40X";
 
 export default function App(props: { disableCustomTheme?: boolean }) {
   return (
@@ -17,17 +18,17 @@ export default function App(props: { disableCustomTheme?: boolean }) {
       <NavBar />
 
       <Container
-        maxWidth="lg"
+        maxWidth="xl"
         sx={{
           my: 12,
           gap: 4,
-          border: "1px solid red",
         }}
       >
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/profile" element={<MainContent />} />
-          <Route path="/projects" element={<Latest />} />
+          <Route path="/error/*" element={<Error40X />} />
+          <Route path="/profile/*" element={<MainContent />} />
+          <Route path="/projects/*" element={<Latest />} />
         </Routes>
       </Container>
 
