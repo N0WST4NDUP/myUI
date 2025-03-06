@@ -7,10 +7,18 @@ interface NavBtnProps {
   text: string;
   size?: "small" | "medium" | "large";
   sx?: object;
+  bold?: boolean;
   onClick?: () => void;
 }
 
-export default function NavBtn({ to, text, size, sx, onClick }: NavBtnProps) {
+export default function NavBtn({
+  to,
+  text,
+  size,
+  sx,
+  bold,
+  onClick,
+}: NavBtnProps) {
   return (
     <Button
       variant="text"
@@ -18,7 +26,7 @@ export default function NavBtn({ to, text, size, sx, onClick }: NavBtnProps) {
       size={size || "small"}
       component={RouterLink}
       to={to}
-      sx={sx}
+      sx={{ ...sx, fontWeight: bold ? "bold" : "normal" }}
       onClick={onClick}
     >
       {text}

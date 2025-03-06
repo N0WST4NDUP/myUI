@@ -7,8 +7,9 @@ import MainContent from "pages/main/MainContent";
 import Latest from "pages/latest/Latest";
 import Footer from "widgets/footer/Footer";
 import { Route, Routes } from "react-router-dom";
+import MainPage from "pages/main/MainPage";
 
-export default function Blog(props: { disableCustomTheme?: boolean }) {
+export default function App(props: { disableCustomTheme?: boolean }) {
   return (
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
@@ -17,16 +18,14 @@ export default function Blog(props: { disableCustomTheme?: boolean }) {
 
       <Container
         maxWidth="lg"
-        component="main"
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          my: 16,
+          my: 12,
           gap: 4,
           border: "1px solid red",
         }}
       >
         <Routes>
+          <Route path="/" element={<MainPage />} />
           <Route path="/profile" element={<MainContent />} />
           <Route path="/projects" element={<Latest />} />
         </Routes>

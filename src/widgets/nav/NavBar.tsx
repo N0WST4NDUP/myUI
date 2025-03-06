@@ -14,6 +14,7 @@ import Sitemark from "shared/components/SitemarkIcon";
 import NavBtn from "features/nav/NavBtn";
 import { Stack } from "@mui/material";
 import Socials from "features/socials/Socials";
+import gsap from "gsap";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
@@ -38,10 +39,15 @@ export default function NavBar() {
     setOpen(newOpen);
   };
 
+  React.useEffect(() => {
+    gsap.from(".navBar", { delay: 0.3, duration: 1, opacity: 0 });
+  }, []);
+
   return (
     <AppBar
       position="fixed"
       enableColorOnDark
+      className="navBar"
       sx={{
         boxShadow: 0,
         bgcolor: "transparent",
@@ -57,9 +63,9 @@ export default function NavBar() {
           >
             <Sitemark />
             <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2, ml: 1 }}>
-              <NavBtn to="/profile" text="Profile" />
-              <NavBtn to="/projects" text="Projects" />
-              <NavBtn to="/stacks" text="Tech Stacks" />
+              <NavBtn to="/profile" text="Profile" bold />
+              <NavBtn to="/projects" text="Projects" bold />
+              <NavBtn to="/stacks" text="Tech Stacks" bold />
             </Box>
           </Box>
           <Box
@@ -107,9 +113,9 @@ export default function NavBar() {
                     to="/profile"
                     text="Profile"
                     size="medium"
+                    bold
                     sx={{
                       width: "100%",
-                      fontWeight: "bold",
                     }}
                     onClick={toggleDrawer(false)}
                   />
@@ -117,9 +123,9 @@ export default function NavBar() {
                     to="/projects"
                     text="Project"
                     size="medium"
+                    bold
                     sx={{
                       width: "100%",
-                      fontWeight: "bold",
                     }}
                     onClick={toggleDrawer(false)}
                   />
@@ -127,9 +133,9 @@ export default function NavBar() {
                     to="/stacks"
                     text="Tech Stacks"
                     size="medium"
+                    bold
                     sx={{
                       width: "100%",
-                      fontWeight: "bold",
                     }}
                     onClick={toggleDrawer(false)}
                   />
