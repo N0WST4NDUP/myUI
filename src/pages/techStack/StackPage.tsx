@@ -9,6 +9,20 @@ import Chip from "@mui/material/Chip";
 import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
+import { IconButton } from "@mui/material";
+import AppsIcon from "@mui/icons-material/Apps";
+import ViewCarouselOutlinedIcon from "@mui/icons-material/ViewCarouselOutlined";
+
+const categorys: string[] = [
+  "FrontEnd",
+  "BackEnd",
+  "DataBase",
+  "test1",
+  "test2",
+  "test3",
+  "test4",
+  "test 5",
+];
 
 const cardData = [
   {
@@ -143,24 +157,15 @@ function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
 }
 
 export default function StackPage() {
-  const [focusedCardIndex, setFocusedCardIndex] = React.useState<number | null>(
-    null
-  );
-
-  const handleFocus = (index: number) => {
-    setFocusedCardIndex(index);
-  };
-
-  const handleBlur = () => {
-    setFocusedCardIndex(null);
-  };
-
   const [selectedFilter, setSelectedFilter] = React.useState<string>("All");
-
-  const categorys: string[] = ["FrontEnd", "BackEnd", "DataBase"];
+  const [viewMode, setViewMode] = React.useState<boolean>(false);
 
   const filterClick = (category: string) => {
     setSelectedFilter(category);
+  };
+
+  const toggleViewMode = () => {
+    setViewMode(viewMode ? false : true);
   };
 
   return (
@@ -169,27 +174,56 @@ export default function StackPage() {
         <Typography variant="h1" gutterBottom>
           Tech Stacks
         </Typography>
-        <Typography>
-          Stay in the loop with the latest about our products
-        </Typography>
+        <Typography>1인 개발하는 사람들은 진짜 대단하다...</Typography>
       </div>
       <Box
         sx={{
           display: "inline-flex",
           flexDirection: "row",
           gap: 3,
-          overflow: "auto",
+          justifyContent: "space-between",
         }}
       >
-        <Chip onClick={() => filterClick("All")} size="medium" label="All" />
-        {categorys.map((category, index) => (
+        <Box
+          sx={{
+            display: "inline-flex",
+            flexDirection: "row",
+            gap: { sm: 1, md: 3 },
+            overflow: "auto",
+          }}
+        >
           <Chip
-            key={index}
-            onClick={() => filterClick(category)}
+            onClick={() => filterClick("All")}
             size="medium"
-            label={category}
+            label="All"
+            sx={{
+              backgroundColor:
+                selectedFilter === "All" ? "none" : "transparent",
+              border: selectedFilter === "All" ? "1px solid" : "none",
+              borderColor: "divider",
+            }}
           />
-        ))}
+          {categorys.map((category, index) => (
+            <Chip
+              key={index}
+              onClick={() => filterClick(category)}
+              size="medium"
+              label={category}
+              sx={{
+                backgroundColor:
+                  selectedFilter === category ? "none" : "transparent",
+                border: selectedFilter === category ? "1px solid" : "none",
+                borderColor: "divider",
+              }}
+            />
+          ))}
+        </Box>
+        <IconButton
+          size="small"
+          aria-label="viewMode"
+          children={viewMode ? <ViewCarouselOutlinedIcon /> : <AppsIcon />}
+          onClick={toggleViewMode}
+        />
       </Box>
 
       {/* 여기까지 */}
@@ -198,19 +232,13 @@ export default function StackPage() {
         {(selectedFilter === "All"
           ? cardData
           : cardData.filter((data) => data.tag === selectedFilter)
-        ).map((data, index) => (
+        ).map((item, index) => (
           <Grid key={index} size={{ xs: 12, md: 6 }}>
-            <SyledCard
-              variant="outlined"
-              onFocus={() => handleFocus(index)}
-              onBlur={handleBlur}
-              tabIndex={index}
-              className={focusedCardIndex === index ? "Mui-focused" : ""}
-            >
+            <SyledCard variant="outlined" tabIndex={index}>
               <CardMedia
                 component="img"
                 alt="green iguana"
-                image={data.img}
+                image={item.img}
                 sx={{
                   aspectRatio: "16 / 9",
                   borderBottom: "1px solid",
@@ -219,20 +247,20 @@ export default function StackPage() {
               />
               <SyledCardContent>
                 <Typography gutterBottom variant="caption" component="div">
-                  {data.tag}
+                  {item.tag}
                 </Typography>
                 <Typography gutterBottom variant="h6" component="div">
-                  {data.title}
+                  {item.title}
                 </Typography>
                 <StyledTypography
                   variant="body2"
                   color="text.secondary"
                   gutterBottom
                 >
-                  {data.description}
+                  {item.description}
                 </StyledTypography>
               </SyledCardContent>
-              <Author authors={data.authors} />
+              <Author authors={item.authors} />
             </SyledCard>
           </Grid>
         ))}
