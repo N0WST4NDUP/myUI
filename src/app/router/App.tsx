@@ -8,6 +8,7 @@ import Latest from "pages/latest/Latest";
 import Footer from "widgets/footer/Footer";
 import { Route, Routes } from "react-router-dom";
 import MainPage from "pages/main/MainPage";
+import StackPage from "pages/techStack/StackPage";
 import Error40X from "pages/error/Error40X";
 
 export default function App(props: { disableCustomTheme?: boolean }) {
@@ -28,6 +29,7 @@ export default function App(props: { disableCustomTheme?: boolean }) {
           <Route path="/" element={<MainPage />} />
           <Route path="/profile/*" element={<MainContent />} />
           <Route path="/projects/*" element={<Latest />} />
+          <Route path="/stacks/*" element={<StackPage />} />
           <Route path="*" element={<Error40X />} />
         </Routes>
       </Container>
