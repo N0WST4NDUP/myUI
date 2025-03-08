@@ -6,7 +6,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Chip from "@mui/material/Chip";
-import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import { IconButton } from "@mui/material";
@@ -24,60 +23,86 @@ const categorys: string[] = [
   "test 5",
 ];
 
-const cardData = [
+const techStacks = [
   {
-    img: "https://picsum.photos/800/450?random=1",
+    icon: "https://picsum.photos/800/450?random=1",
     tag: "BackEnd",
-    title: "Revolutionizing software development with cutting-edge tools",
-    description:
-      "Our latest engineering tools are designed to streamline workflows and boost productivity. Discover how these innovations are transforming the software development landscape.",
-    authors: [
+    name: "name1",
+    description: "description1",
+    used: [
       { name: "Remy Sharp", avatar: "/static/images/avatar/1.jpg" },
       { name: "Travis Howard", avatar: "/static/images/avatar/2.jpg" },
     ],
   },
   {
-    img: "https://picsum.photos/800/450?random=2",
+    icon: "https://picsum.photos/800/450?random=2",
     tag: "FrontEnd",
-    title: "Innovative product features that drive success",
-    description:
-      "Explore the key features of our latest product release that are helping businesses achieve their goals. From user-friendly interfaces to robust functionality, learn why our product stands out.",
-    authors: [{ name: "Erica Johns", avatar: "/static/images/avatar/6.jpg" }],
-  },
-  {
-    img: "https://picsum.photos/800/450?random=3",
-    tag: "BackEnd",
-    title: "Designing for the future: trends and insights",
-    description:
-      "Stay ahead of the curve with the latest design trends and insights. Our design team shares their expertise on creating intuitive and visually stunning user experiences.",
-    authors: [{ name: "Kate Morrison", avatar: "/static/images/avatar/7.jpg" }],
-  },
-  {
-    img: "https://picsum.photos/800/450?random=4",
-    tag: "DataBase",
-    title: "Our company's journey: milestones and achievements",
-    description:
-      "Take a look at our company's journey and the milestones we've achieved along the way. From humble beginnings to industry leader, discover our story of growth and success.",
-    authors: [{ name: "Cindy Baker", avatar: "/static/images/avatar/3.jpg" }],
-  },
-  {
-    img: "https://picsum.photos/800/450?random=45",
-    tag: "BackEnd",
-    title: "Pioneering sustainable engineering solutions",
-    description:
-      "Learn about our commitment to sustainability and the innovative engineering solutions we're implementing to create a greener future. Discover the impact of our eco-friendly initiatives.",
-    authors: [
+    name: "name2",
+    description: "description2",
+    used: [
+      { name: "Cindy Baker", avatar: "/static/images/avatar/3.jpg" },
       { name: "Agnes Walker", avatar: "/static/images/avatar/4.jpg" },
-      { name: "Trevor Henderson", avatar: "/static/images/avatar/5.jpg" },
     ],
   },
   {
-    img: "https://picsum.photos/800/450?random=6",
+    icon: "https://picsum.photos/800/450?random=3",
     tag: "DataBase",
-    title: "Maximizing efficiency with our latest product updates",
-    description:
-      "Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.",
-    authors: [{ name: "Travis Howard", avatar: "/static/images/avatar/2.jpg" }],
+    name: "name3",
+    description: "description3",
+    used: [
+      { name: "Trevor Hansen", avatar: "/static/images/avatar/5.jpg" },
+      { name: "Sandra Adams", avatar: "/static/images/avatar/6.jpg" },
+    ],
+  },
+  {
+    icon: "https://picsum.photos/800/450?random=4",
+    tag: "BackEnd",
+    name: "name4",
+    description: "description4",
+    used: [
+      { name: "Ali Connors", avatar: "/static/images/avatar/7.jpg" },
+      { name: "Jennifer Smith", avatar: "/static/images/avatar/8.jpg" },
+    ],
+  },
+  {
+    icon: "https://picsum.photos/800/450?random=5",
+    tag: "FrontEnd",
+    name: "name5",
+    description: "description5",
+    used: [
+      { name: "Michael Scott", avatar: "/static/images/avatar/9.jpg" },
+      { name: "Dwight Schrute", avatar: "/static/images/avatar/10.jpg" },
+    ],
+  },
+  {
+    icon: "https://picsum.photos/800/450?random=6",
+    tag: "DataBase",
+    name: "name6",
+    description: "description6",
+    used: [
+      { name: "Jim Halpert", avatar: "/static/images/avatar/11.jpg" },
+      { name: "Pam Beesly", avatar: "/static/images/avatar/12.jpg" },
+    ],
+  },
+  {
+    icon: "https://picsum.photos/800/450?random=7",
+    tag: "BackEnd",
+    name: "name7",
+    description: "description7",
+    used: [
+      { name: "Stanley Hudson", avatar: "/static/images/avatar/13.jpg" },
+      { name: "Phyllis Vance", avatar: "/static/images/avatar/14.jpg" },
+    ],
+  },
+  {
+    icon: "https://picsum.photos/800/450?random=8",
+    tag: "FrontEnd",
+    name: "name8",
+    description: "description8",
+    used: [
+      { name: "Ryan Howard", avatar: "/static/images/avatar/15.jpg" },
+      { name: "Kelly Kapoor", avatar: "/static/images/avatar/16.jpg" },
+    ],
   },
 ];
 
@@ -85,10 +110,9 @@ const SyledCard = styled(Card)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   padding: 0,
-  height: "100%",
   backgroundColor: (theme.vars || theme).palette.background.paper,
   "&:hover": {
-    backgroundColor: "transparent",
+    backgroundColor: (theme.vars || theme).palette.background.default,
     cursor: "pointer",
   },
   "&:focus-visible": {
@@ -151,7 +175,6 @@ function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
           {authors.map((author) => author.name).join(", ")}
         </Typography>
       </Box>
-      <Typography variant="caption">July 14, 2021</Typography>
     </Box>
   );
 }
@@ -228,43 +251,49 @@ export default function StackPage() {
 
       {/* 여기까지 */}
 
-      <Grid container spacing={2}>
+      <Box
+        sx={{
+          display: "inline-flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          overflow: "auto",
+          border: "1px solid red",
+        }}
+      >
         {(selectedFilter === "All"
-          ? cardData
-          : cardData.filter((data) => data.tag === selectedFilter)
+          ? techStacks
+          : techStacks.filter((stack) => stack.tag === selectedFilter)
         ).map((item, index) => (
-          <Grid key={index} size={{ xs: 12, md: 6 }}>
-            <SyledCard variant="outlined" tabIndex={index}>
-              <CardMedia
-                component="img"
-                alt="green iguana"
-                image={item.img}
-                sx={{
-                  aspectRatio: "16 / 9",
-                  borderBottom: "1px solid",
-                  borderColor: "divider",
-                }}
-              />
-              <SyledCardContent>
-                <Typography gutterBottom variant="caption" component="div">
-                  {item.tag}
-                </Typography>
-                <Typography gutterBottom variant="h6" component="div">
-                  {item.title}
-                </Typography>
-                <StyledTypography
-                  variant="body2"
-                  color="text.secondary"
-                  gutterBottom
-                >
-                  {item.description}
-                </StyledTypography>
-              </SyledCardContent>
-              <Author authors={item.authors} />
-            </SyledCard>
-          </Grid>
+          <SyledCard key={index} variant="outlined" tabIndex={index}>
+            <CardMedia
+              component="img"
+              alt="green iguana"
+              image={item.icon}
+              sx={{
+                aspectRatio: "16 / 9",
+                borderBottom: "1px solid",
+                borderColor: "divider",
+              }}
+            />
+            <SyledCardContent>
+              <Typography gutterBottom variant="caption" component="div">
+                {item.tag}
+              </Typography>
+              <Typography gutterBottom variant="h6" component="div">
+                {item.name}
+              </Typography>
+              <StyledTypography
+                variant="body2"
+                color="text.secondary"
+                gutterBottom
+              >
+                {item.description}
+              </StyledTypography>
+            </SyledCardContent>
+            <Author authors={item.used} />
+          </SyledCard>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 }
