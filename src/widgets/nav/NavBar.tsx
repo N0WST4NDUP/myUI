@@ -64,7 +64,7 @@ export default function NavBar() {
             <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2, ml: 1 }}>
               <NavBtn to="/profile" text="Profile" bold />
               <NavBtn to="/projects" text="Projects" bold />
-              <NavBtn to="/stacks" text="Tech Stacks" bold />
+              <NavBtn to="/technods" text="Technods" bold />
             </Box>
           </Box>
           <Box
@@ -129,8 +129,8 @@ export default function NavBar() {
                     onClick={toggleDrawer(false)}
                   />
                   <NavBtn
-                    to="/stacks"
-                    text="Tech Stacks"
+                    to="/technods"
+                    text="Technods"
                     size="medium"
                     bold
                     sx={{

@@ -1,7 +1,7 @@
 import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
-import AppTheme from "shared/theme/AppTheme";
+import AppTheme from "app/provider/AppTheme";
 import NavBar from "widgets/nav/NavBar";
 import MainContent from "pages/main/MainContent";
 import Latest from "pages/latest/Latest";
@@ -29,7 +29,7 @@ export default function App(props: { disableCustomTheme?: boolean }) {
           <Route path="/" element={<MainPage />} />
           <Route path="/profile/*" element={<MainContent />} />
           <Route path="/projects/*" element={<Latest />} />
-          <Route path="/stacks/*" element={<StackPage />} />
+          <Route path="/technods/*" element={<StackPage />} />
           <Route path="*" element={<Error40X />} />
         </Routes>
       </Container>
