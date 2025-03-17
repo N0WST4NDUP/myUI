@@ -28,19 +28,6 @@ const defaultTheme = createTheme();
 
 const customShadows: Shadows = [...defaultTheme.shadows];
 
-export const brand = {
-  50: "hsl(210, 100%, 95%)",
-  100: "hsl(210, 100%, 92%)",
-  200: "hsl(210, 100%, 80%)",
-  300: "hsl(210, 100%, 65%)",
-  400: "hsl(210, 98%, 48%)",
-  500: "hsl(210, 98%, 42%)",
-  600: "hsl(210, 98%, 55%)",
-  700: "hsl(210, 100%, 35%)",
-  800: "hsl(210, 100%, 16%)",
-  900: "hsl(210, 100%, 21%)",
-};
-
 export const gray = {
   50: "hsl(220, 35%, 97%)",
   100: "hsl(220, 30%, 94%)",
@@ -103,27 +90,27 @@ export const getDesignTokens = (mode: PaletteMode) => {
     palette: {
       mode,
       primary: {
-        light: brand[200],
-        main: brand[400],
-        dark: brand[700],
-        contrastText: brand[50],
+        light: gray[200],
+        main: gray[400],
+        dark: gray[700],
+        contrastText: gray[50],
         ...(mode === "dark" && {
-          contrastText: brand[50],
-          light: brand[300],
-          main: brand[400],
-          dark: brand[700],
+          contrastText: gray[50],
+          light: gray[300],
+          main: gray[400],
+          dark: gray[700],
         }),
       },
       info: {
-        light: brand[100],
-        main: brand[300],
-        dark: brand[600],
+        light: gray[100],
+        main: gray[300],
+        dark: gray[600],
         contrastText: gray[50],
         ...(mode === "dark" && {
-          contrastText: brand[300],
-          light: brand[500],
-          main: brand[700],
-          dark: brand[900],
+          contrastText: gray[300],
+          light: gray[500],
+          main: gray[700],
+          dark: gray[900],
         }),
       },
       warning: {
@@ -246,15 +233,15 @@ export const colorSchemes = {
   light: {
     palette: {
       primary: {
-        light: brand[200],
-        main: brand[400],
-        dark: brand[700],
-        contrastText: brand[50],
+        light: gray[200],
+        main: gray[400],
+        dark: gray[700],
+        contrastText: gray[50],
       },
       info: {
-        light: brand[100],
-        main: brand[300],
-        dark: brand[600],
+        light: gray[100],
+        main: gray[300],
+        dark: gray[600],
         contrastText: gray[50],
       },
       warning: {
@@ -296,16 +283,16 @@ export const colorSchemes = {
   dark: {
     palette: {
       primary: {
-        contrastText: brand[50],
-        light: brand[300],
-        main: brand[400],
-        dark: brand[700],
+        contrastText: gray[50],
+        light: gray[300],
+        main: gray[400],
+        dark: gray[700],
       },
       info: {
-        contrastText: brand[300],
-        light: brand[500],
-        main: brand[700],
-        dark: brand[900],
+        contrastText: gray[300],
+        light: gray[500],
+        main: gray[700],
+        dark: gray[900],
       },
       warning: {
         light: orange[400],
