@@ -1,8 +1,20 @@
-import { Box } from "@mui/material";
 import * as React from "react";
+import FABs from "widgets/nav/FABs";
+import NavBar from "widgets/nav/NavBar";
 
 const EnterSite = () => {
-  return <Box>Hello, World!</Box>;
+  const [firstRender, setFirstRender] = React.useState(true);
+
+  React.useEffect(() => {
+    setFirstRender(false);
+  }, []);
+
+  return (
+    <React.Fragment>
+      <NavBar display={firstRender ? "none" : "flex"} />
+      <FABs />
+    </React.Fragment>
+  );
 };
 
 export default EnterSite;

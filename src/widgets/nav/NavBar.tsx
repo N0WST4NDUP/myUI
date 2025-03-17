@@ -9,16 +9,16 @@ const SyledButton = styled(Button)(({ theme }) => ({
     content: '""',
     position: "absolute",
     left: 0,
-    bottom: -3, // 초기 위치를 아래로 설정
+    bottom: -3,
     width: "100%",
     height: "3px",
     backgroundColor: theme.palette.text.primary,
     transition: "transform 0.3s ease",
-    transform: "scaleX(0)", // 초기 상태에서 보이지 않도록 설정
+    transform: "scaleX(0)",
     transformOrigin: "bottom right",
   },
   "&:hover::after": {
-    transform: "scaleX(1)", // hover 시 보이도록 설정
+    transform: "scaleX(1)",
     transformOrigin: "bottom left",
   },
   font: theme.typography.fontFamily,
@@ -31,18 +31,23 @@ const NavBar = (props: { display?: string }) => {
     <AppBar
       enableColorOnDark
       sx={{
-        display: props.display || "flex",
+        position: "fixed",
+        display: props.display || "fixed",
         flexDirection: "row",
         justifyContent: "center",
-        gap: 6,
+        gap: { xs: 2, sm: 6 },
         padding: 0,
         boxShadow: 0,
         bgcolor: "transparent",
         backgroundImage: "none",
-        mt: "calc(var(--template-frame-height, 0px) + 24px)",
+        mt: {
+          xs: `calc(var(--template-frame-height, 0px) + 16px)`,
+          sm: `calc(var(--template-frame-height, 0px) + 24px)`,
+        },
       }}
     >
       <SyledButton
+        href="https://github.com/n0wst4ndup/"
         sx={{
           height: {
             xs: "40px",
@@ -57,6 +62,7 @@ const NavBar = (props: { display?: string }) => {
         GitHub
       </SyledButton>
       <SyledButton
+        href="https://velog.io/@n0wst4ndup/"
         sx={{
           height: {
             xs: "40px",
