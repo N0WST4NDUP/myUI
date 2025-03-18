@@ -1,17 +1,11 @@
 import * as React from "react";
-import FABs from "widgets/nav/FABs";
 import NavBar from "widgets/nav/NavBar";
+import FABs from "widgets/nav/FABs";
 
 const EnterSite = () => {
-  const [firstRender, setFirstRender] = React.useState(true);
-
-  React.useEffect(() => {
-    setFirstRender(false);
-  }, []);
-
   return (
     <React.Fragment>
-      <NavBar display={firstRender ? "none" : "flex"} />
+      <NavBar />
       <FABs />
     </React.Fragment>
   );

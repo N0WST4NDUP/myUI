@@ -32,7 +32,7 @@ const NavBar = (props: { display?: string }) => {
       enableColorOnDark
       sx={{
         position: "fixed",
-        display: props.display || "fixed",
+        display: props.display || "flex",
         flexDirection: "row",
         justifyContent: "center",
         gap: { xs: 2, sm: 6 },
