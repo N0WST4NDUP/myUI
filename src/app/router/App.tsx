@@ -35,7 +35,19 @@ const App = () => {
             hasVisited ? (
               <MainPage />
             ) : (
-              <React.Suspense fallback={<Loading />}>
+              <React.Suspense
+                fallback={
+                  <Loading
+                    sx={{
+                      position: "fixed",
+                      top: 0,
+                      left: 0,
+                      width: "100vw",
+                      height: "97vh",
+                    }}
+                  />
+                }
+              >
                 <Animation handleStateFunction={handleVisited} />
               </React.Suspense>
             )
