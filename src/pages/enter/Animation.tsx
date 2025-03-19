@@ -9,8 +9,8 @@ import { useGSAP } from "@gsap/react";
  * 2. 이미지가 너무 많아서 로딩이 느림
  * 3. 애니메이션이 썩 유쾌하지 않음
  */
-const prefix = "/stackIcons/";
-const suffix = "-dark.svg";
+const prefix = "stackIcons/";
+const suffix = "-Dark.SVG";
 
 const IconRow = styled(Box)(() => ({
   position: "relative",
@@ -117,49 +117,49 @@ const DefaultAnimation = (grandparent: { handleStateFunction: () => void }) => {
           url={prefix + "StyledComponents" + suffix}
         />
         <HexIcon
-          className="vite forth"
+          className="Vite forth"
           size={imgSize}
-          url={prefix + "vite" + suffix}
+          url={prefix + "Vite" + suffix}
         />
         <HexIcon
-          className="redux forth"
+          className="Redux forth"
           size={imgSize}
-          url={prefix + "redux" + suffix}
+          url={prefix + "Redux" + suffix}
         />
         <HexIcon
-          className="ableton third"
+          className="Ableton third"
           size={imgSize}
-          url={prefix + "ableton" + suffix}
+          url={prefix + "Ableton" + suffix}
         />
         <HexIcon
-          className="webpack third"
+          className="Webpack third"
           size={imgSize}
-          url={prefix + "webpack" + suffix}
+          url={prefix + "Webpack" + suffix}
         />
         <HexIcon
-          className="regex third"
+          className="Regex third"
           size={imgSize}
-          url={prefix + "regex" + suffix}
+          url={prefix + "Regex" + suffix}
         />
         <HexIcon
-          className="stackoverflow third"
+          className="StackOverflow third"
           size={imgSize}
-          url={prefix + "stackoverflow" + suffix}
+          url={prefix + "StackOverflow" + suffix}
         />
         <HexIcon
-          className="flask third"
+          className="Flask third"
           size={imgSize}
-          url={prefix + "flask" + suffix}
+          url={prefix + "Flask" + suffix}
         />
         <HexIcon
-          className="processing forth"
+          className="Processing forth"
           size={imgSize}
-          url={prefix + "processing" + suffix}
+          url={prefix + "Processing" + suffix}
         />
         <HexIcon
-          className="workers forth"
+          className="Workers forth"
           size={imgSize}
-          url={prefix + "workers" + suffix}
+          url={prefix + "Workers" + suffix}
         />
         <HexIcon
           className="WebAssembly forth"
@@ -169,205 +169,205 @@ const DefaultAnimation = (grandparent: { handleStateFunction: () => void }) => {
       </IconRow>
       <IconRow aria-label="second row">
         <HexIcon
-          className="prisma forth"
+          className="Prisma forth"
           size={imgSize}
-          url={prefix + "prisma" + suffix}
+          url={prefix + "Prisma" + suffix}
         />
         <HexIcon
-          className="pytorch forth"
+          className="PyTorch forth"
           size={imgSize}
-          url={prefix + "pytorch" + suffix}
+          url={prefix + "PyTorch" + suffix}
         />
         <HexIcon
-          className="angular third"
+          className="Angular third"
           size={imgSize}
-          url={prefix + "angular" + suffix}
+          url={prefix + "Angular" + suffix}
         />
         <HexIcon
-          className="mysql second"
+          className="MySQL second"
           size={imgSize}
-          url={prefix + "mysql" + suffix}
+          url={prefix + "MySQL" + suffix}
         />
         <HexIcon
-          className="photoshop third"
+          className="Photoshop third"
           size={imgSize}
-          url={prefix + "photoshop" + suffix}
+          url={prefix + "Photoshop" + suffix}
         />
         <HexIcon
-          className="redis second"
+          className="Redis second"
           size={imgSize}
-          url={prefix + "redis" + suffix}
+          url={prefix + "Redis" + suffix}
         />
         <HexIcon
-          className="powershell third"
+          className="Powershell third"
           size={imgSize}
-          url={prefix + "powershell" + suffix}
+          url={prefix + "Powershell" + suffix}
         />
         <HexIcon
-          className="nginx third"
+          className="Nginx third"
           size={imgSize}
-          url={prefix + "nginx" + suffix}
+          url={prefix + "Nginx" + suffix}
         />
         <HexIcon
-          className="plan9 forth"
+          className="Plan9 forth"
           size={imgSize}
-          url={prefix + "plan9" + suffix}
+          url={prefix + "Plan9" + suffix}
         />
         <HexIcon
-          className="replit forth"
+          className="Replit forth"
           size={imgSize}
-          url={prefix + "replit" + suffix}
+          url={prefix + "Replit" + suffix}
         />
       </IconRow>
       <IconRow aria-label="third row">
         <HexIcon
-          className="octave forth"
+          className="Octave forth"
           size={imgSize}
-          url={prefix + "octave" + suffix}
+          url={prefix + "Octave" + suffix}
         />
         <HexIcon
-          className="neovim forth"
+          className="NeoVim forth"
           size={imgSize}
-          url={prefix + "neovim" + suffix}
+          url={prefix + "NeoVim" + suffix}
         />
         <HexIcon
-          className="golang third"
+          className="GoLang third"
           size={imgSize}
-          url={prefix + "golang" + suffix}
+          url={prefix + "GoLang" + suffix}
         />
         <HexIcon
-          className="githubactions second"
+          className="GithubActions second"
           size={imgSize}
-          url={prefix + "githubactions" + suffix}
+          url={prefix + "GithubActions" + suffix}
         />
         <HexIcon
-          className="tensorflow second"
+          className="TensorFlow second"
           size={imgSize}
-          url={prefix + "tensorflow" + suffix}
+          url={prefix + "TensorFlow" + suffix}
         />
         <HexIcon
-          className="aws first"
+          className="AWS first"
           size={imgSize}
-          url={prefix + "aws" + suffix}
+          url={prefix + "AWS" + suffix}
         />
         <HexIcon
-          className="markdown second"
+          className="Markdown second"
           size={imgSize}
-          url={prefix + "markdown" + suffix}
+          url={prefix + "Markdown" + suffix}
         />
         <HexIcon
-          className="cloudflare second"
+          className="Cloudflare second"
           size={imgSize}
-          url={prefix + "cloudflare" + suffix}
+          url={prefix + "Cloudflare" + suffix}
         />
         <HexIcon
-          className="raspberrypi third"
+          className="RaspberryPi third"
           size={imgSize}
-          url={prefix + "raspberrypi" + suffix}
+          url={prefix + "RaspberryPi" + suffix}
         />
         <HexIcon
-          className="nuxtjs forth"
+          className="NuxtJS forth"
           size={imgSize}
-          url={prefix + "nuxtjs" + suffix}
+          url={prefix + "NuxtJS" + suffix}
         />
         <HexIcon
-          className="netlify forth"
+          className="Netlify forth"
           size={imgSize}
-          url={prefix + "netlify" + suffix}
+          url={prefix + "Netlify" + suffix}
         />
       </IconRow>
       <IconRow aria-label="fourth row">
         <HexIcon
-          className="pug forth"
+          className="Pug forth"
           size={imgSize}
-          url={prefix + "pug" + suffix}
+          url={prefix + "Pug" + suffix}
         />
         <HexIcon
-          className="html second"
+          className="HTML second"
           size={imgSize}
-          url={prefix + "html" + suffix}
+          url={prefix + "HTML" + suffix}
         />
         <HexIcon
-          className="vuejs second"
+          className="VueJS second"
           size={imgSize}
-          url={prefix + "vuejs" + suffix}
+          url={prefix + "VueJS" + suffix}
         />
         <HexIcon
-          className="python first"
+          className="Python first"
           size={imgSize}
-          url={prefix + "python" + suffix}
+          url={prefix + "Python" + suffix}
         />
         <HexIcon
-          className="react first"
+          className="React first"
           size={imgSize}
-          url={prefix + "react" + suffix}
+          url={prefix + "React" + suffix}
         />
         <HexIcon
-          className="docker first"
+          className="Docker first"
           size={imgSize}
-          url={prefix + "docker" + suffix}
+          url={prefix + "Docker" + suffix}
         />
         <HexIcon
-          className="nodejs second"
+          className="NodeJS second"
           size={imgSize}
-          url={prefix + "nodejs" + suffix}
+          url={prefix + "NodeJS" + suffix}
         />
         <HexIcon
-          className="eclipse second"
+          className="Eclipse second"
           size={imgSize}
-          url={prefix + "eclipse" + suffix}
+          url={prefix + "Eclipse" + suffix}
         />
         <HexIcon
-          className="v second"
+          className="V second"
           size={imgSize}
-          url={prefix + "v" + suffix}
+          url={prefix + "V" + suffix}
         />
         <HexIcon
-          className="qt forth"
+          className="QT forth"
           size={imgSize}
-          url={prefix + "qt" + suffix}
+          url={prefix + "QT" + suffix}
         />
       </IconRow>
       <IconRow aria-label="fifth row">
         <HexIcon
-          className="solidjs forth"
+          className="SolidJS forth"
           size={imgSize}
-          url={prefix + "solidjs" + suffix}
+          url={prefix + "SolidJS" + suffix}
         />
         <HexIcon
-          className="remix third"
+          className="Remix third"
           size={imgSize}
-          url={prefix + "remix" + suffix}
+          url={prefix + "Remix" + suffix}
         />
         <HexIcon
-          className="idea second"
+          className="Idea second"
           size={imgSize}
-          url={prefix + "idea" + suffix}
+          url={prefix + "Idea" + suffix}
         />
         <HexIcon
-          className="gradle second"
+          className="Gradle second"
           size={imgSize}
-          url={prefix + "gradle" + suffix}
+          url={prefix + "Gradle" + suffix}
         />
         <HexIcon
-          className="devto first"
+          className="DevTo first"
           size={imgSize}
-          url={prefix + "devto" + suffix}
+          url={prefix + "DevTo" + suffix}
         />
         <HexIcon
-          className="java primary"
+          className="Java primary"
           size={imgSize}
-          url={prefix + "java" + suffix}
+          url={prefix + "Java" + suffix}
         />
         <HexIcon
-          className="spring first"
+          className="Spring first"
           size={imgSize}
-          url={prefix + "spring" + suffix}
+          url={prefix + "Spring" + suffix}
         />
         <HexIcon
-          className="materialui second"
+          className="MaterialUI second"
           size={imgSize}
-          url={prefix + "materialui" + suffix}
+          url={prefix + "MaterialUI" + suffix}
         />
         <HexIcon
           className="Prometheus third"
@@ -375,61 +375,61 @@ const DefaultAnimation = (grandparent: { handleStateFunction: () => void }) => {
           url={prefix + "Prometheus" + suffix}
         />
         <HexIcon
-          className="sketchup forth"
+          className="Sketchup forth"
           size={imgSize}
-          url={prefix + "sketchup" + suffix}
+          url={prefix + "Sketchup" + suffix}
         />
         <HexIcon
-          className="mastodon forth"
+          className="Mastodon forth"
           size={imgSize}
-          url={prefix + "mastodon" + suffix}
+          url={prefix + "Mastodon" + suffix}
         />
       </IconRow>
       <IconRow aria-label="sixth row">
         <HexIcon
-          className="ipfs forth"
+          className="IPFS forth"
           size={imgSize}
-          url={prefix + "ipfs" + suffix}
+          url={prefix + "IPFS" + suffix}
         />
         <HexIcon
-          className="nextjs third"
+          className="NextJS third"
           size={imgSize}
-          url={prefix + "nextjs" + suffix}
+          url={prefix + "NextJS" + suffix}
         />
         <HexIcon
-          className="figma second"
+          className="Figma second"
           size={imgSize}
-          url={prefix + "figma" + suffix}
+          url={prefix + "Figma" + suffix}
         />
         <HexIcon
-          className="typescript first"
+          className="TypeScript first"
           size={imgSize}
-          url={prefix + "typescript" + suffix}
+          url={prefix + "TypeScript" + suffix}
         />
         <HexIcon
-          className="maven first"
+          className="Maven first"
           size={imgSize}
-          url={prefix + "maven" + suffix}
+          url={prefix + "Maven" + suffix}
         />
         <HexIcon
-          className="github first"
+          className="Github first"
           size={imgSize}
-          url={prefix + "github" + suffix}
+          url={prefix + "Github" + suffix}
         />
         <HexIcon
-          className="jenkins first"
+          className="Jenkins first"
           size={imgSize}
-          url={prefix + "jenkins" + suffix}
+          url={prefix + "Jenkins" + suffix}
         />
         <HexIcon
-          className="grafana second"
+          className="Grafana second"
           size={imgSize}
-          url={prefix + "grafana" + suffix}
+          url={prefix + "Grafana" + suffix}
         />
         <HexIcon
-          className="javascript third"
+          className="JavaScript third"
           size={imgSize}
-          url={prefix + "javascript" + suffix}
+          url={prefix + "JavaScript" + suffix}
         />
         <HexIcon
           className="Illustrator forth"
@@ -439,101 +439,101 @@ const DefaultAnimation = (grandparent: { handleStateFunction: () => void }) => {
       </IconRow>
       <IconRow aria-label="seventh row">
         <HexIcon
-          className="haxe forth"
+          className="Haxe forth"
           size={imgSize}
-          url={prefix + "haxe" + suffix}
+          url={prefix + "Haxe" + suffix}
         />
         <HexIcon
-          className="twitter forth"
+          className="Twitter forth"
           size={imgSize}
-          url={prefix + "twitter" + suffix}
+          url={prefix + "Twitter" + suffix}
         />
         <HexIcon
-          className="jquery third"
+          className="JQuery third"
           size={imgSize}
-          url={prefix + "jquery" + suffix}
+          url={prefix + "JQuery" + suffix}
         />
         <HexIcon
-          className="postgresql second"
+          className="PostgreSQL second"
           size={imgSize}
-          url={prefix + "postgresql" + suffix}
+          url={prefix + "PostgreSQL" + suffix}
         />
         <HexIcon
-          className="linux first"
+          className="Linux first"
           size={imgSize}
-          url={prefix + "linux" + suffix}
+          url={prefix + "Linux" + suffix}
         />
         <HexIcon
-          className="cpp second"
+          className="CPP second"
           size={imgSize}
-          url={prefix + "cpp" + suffix}
+          url={prefix + "CPP" + suffix}
         />
         <HexIcon
-          className="kubernetes first"
+          className="Kubernetes first"
           size={imgSize}
-          url={prefix + "kubernetes" + suffix}
+          url={prefix + "Kubernetes" + suffix}
         />
         <HexIcon
-          className="rabbitmq second"
+          className="RabbitMQ second"
           size={imgSize}
-          url={prefix + "rabbitmq" + suffix}
+          url={prefix + "RabbitMQ" + suffix}
         />
         <HexIcon
-          className="planetscale third"
+          className="PlanetScale third"
           size={imgSize}
-          url={prefix + "planetscale" + suffix}
+          url={prefix + "PlanetScale" + suffix}
         />
         <HexIcon
-          className="lit third"
+          className="Lit third"
           size={imgSize}
-          url={prefix + "lit" + suffix}
+          url={prefix + "Lit" + suffix}
         />
         <HexIcon
-          className="jest forth"
+          className="Jest forth"
           size={imgSize}
-          url={prefix + "jest" + suffix}
+          url={prefix + "Jest" + suffix}
         />
       </IconRow>
       <IconRow aria-label="eighth row">
         <HexIcon
-          className="instagram forth"
+          className="Instagram forth"
           size={imgSize}
-          url={prefix + "instagram" + suffix}
+          url={prefix + "Instagram" + suffix}
         />
         <HexIcon
-          className="mongodb third"
+          className="MongoDB third"
           size={imgSize}
-          url={prefix + "mongodb" + suffix}
+          url={prefix + "MongoDB" + suffix}
         />
         <HexIcon
-          className="svg third"
+          className="SVG third"
           size={imgSize}
-          url={prefix + "svg" + suffix}
+          url={prefix + "SVG" + suffix}
         />
         <HexIcon
-          className="premiere second"
+          className="Premiere second"
           size={imgSize}
-          url={prefix + "premiere" + suffix}
+          url={prefix + "Premiere" + suffix}
         />
         <HexIcon
-          className="vscode second"
+          className="VSCode second"
           size={imgSize}
-          url={prefix + "vscode" + suffix}
+          url={prefix + "VSCode" + suffix}
         />
         <HexIcon
-          className="kotlin second"
+          className="Kotlin second"
           size={imgSize}
-          url={prefix + "kotlin" + suffix}
+          url={prefix + "Kotlin" + suffix}
         />
         <HexIcon
-          className="php third"
+          className="PHP third"
           size={imgSize}
-          url={prefix + "php" + suffix}
+          url={prefix + "PHP" + suffix}
         />
         <HexIcon
-          className="gcp third"
+          className="GCP third"
           size={imgSize}
-          url={prefix + "gcp" + suffix}
+          url={prefix + "GCP" + suffix}
         />
         <HexIcon
           className="Heroku forth"
@@ -541,31 +541,31 @@ const DefaultAnimation = (grandparent: { handleStateFunction: () => void }) => {
           url={prefix + "Heroku" + suffix}
         />
         <HexIcon
-          className="zig forth"
+          className="Zig forth"
           size={imgSize}
-          url={prefix + "zig" + suffix}
+          url={prefix + "Zig" + suffix}
         />
       </IconRow>
       <IconRow aria-label="ninth row">
         <HexIcon
-          className="matlab forth"
+          className="Matlab forth"
           size={imgSize}
-          url={prefix + "matlab" + suffix}
+          url={prefix + "Matlab" + suffix}
         />
         <HexIcon
-          className="ktor forth"
+          className="Ktor forth"
           size={imgSize}
-          url={prefix + "ktor" + suffix}
+          url={prefix + "Ktor" + suffix}
         />
         <HexIcon
-          className="linkedin forth"
+          className="LinkedIn forth"
           size={imgSize}
-          url={prefix + "linkedin" + suffix}
+          url={prefix + "LinkedIn" + suffix}
         />
         <HexIcon
-          className="postman third"
+          className="Postman third"
           size={imgSize}
-          url={prefix + "postman" + suffix}
+          url={prefix + "Postman" + suffix}
         />
         <HexIcon
           className="R third"
@@ -573,34 +573,34 @@ const DefaultAnimation = (grandparent: { handleStateFunction: () => void }) => {
           url={prefix + "R" + suffix}
         />
         <HexIcon
-          className="unity third"
+          className="Unity third"
           size={imgSize}
-          url={prefix + "unity" + suffix}
+          url={prefix + "Unity" + suffix}
         />
         <HexIcon
-          className="coffeescript third"
+          className="CoffeeScript third"
           size={imgSize}
-          url={prefix + "coffeescript" + suffix}
+          url={prefix + "CoffeeScript" + suffix}
         />
         <HexIcon
-          className="discord third"
+          className="Discord third"
           size={imgSize}
-          url={prefix + "discord" + suffix}
+          url={prefix + "Discord" + suffix}
         />
         <HexIcon
-          className="tailwindcss forth"
+          className="TailwindCSS forth"
           size={imgSize}
-          url={prefix + "tailwindcss" + suffix}
+          url={prefix + "TailwindCSS" + suffix}
         />
         <HexIcon
-          className="styledcomponents forth"
+          className="StyledComponents forth"
           size={imgSize}
-          url={prefix + "styledcomponents" + suffix}
+          url={prefix + "StyledComponents" + suffix}
         />
         <HexIcon
-          className="wordpress forth"
+          className="Wordpress forth"
           size={imgSize}
-          url={prefix + "wordpress" + suffix}
+          url={prefix + "Wordpress" + suffix}
         />
       </IconRow>
     </Box>
@@ -680,245 +680,245 @@ const MobileAnimation = (grandparent: { handleStateFunction: () => void }) => {
     >
       <IconRow aria-label="first row">
         <HexIcon
-          className="ableton third"
+          className="Ableton third"
           size={imgSize}
-          url={prefix + "ableton" + suffix}
+          url={prefix + "Ableton" + suffix}
         />
         <HexIcon
-          className="webpack third"
+          className="Webpack third"
           size={imgSize}
-          url={prefix + "webpack" + suffix}
+          url={prefix + "Webpack" + suffix}
         />
         <HexIcon
-          className="regex third"
+          className="Regex third"
           size={imgSize}
-          url={prefix + "regex" + suffix}
+          url={prefix + "Regex" + suffix}
         />
         <HexIcon
-          className="stackoverflow third"
+          className="StackOverflow third"
           size={imgSize}
-          url={prefix + "stackoverflow" + suffix}
+          url={prefix + "StackOverflow" + suffix}
         />
         <HexIcon
-          className="flask third"
+          className="Flask third"
           size={imgSize}
-          url={prefix + "flask" + suffix}
+          url={prefix + "Flask" + suffix}
         />
       </IconRow>
       <IconRow aria-label="second row">
         <HexIcon
-          className="angular third"
+          className="Angular third"
           size={imgSize}
-          url={prefix + "angular" + suffix}
+          url={prefix + "Angular" + suffix}
         />
         <HexIcon
-          className="mysql second"
+          className="MySQL second"
           size={imgSize}
-          url={prefix + "mysql" + suffix}
+          url={prefix + "MySQL" + suffix}
         />
         <HexIcon
-          className="photoshop third"
+          className="Photoshop third"
           size={imgSize}
-          url={prefix + "photoshop" + suffix}
+          url={prefix + "Photoshop" + suffix}
         />
         <HexIcon
-          className="redis second"
+          className="Redis second"
           size={imgSize}
-          url={prefix + "redis" + suffix}
+          url={prefix + "Redis" + suffix}
         />
         <HexIcon
-          className="powershell third"
+          className="Powershell third"
           size={imgSize}
-          url={prefix + "powershell" + suffix}
+          url={prefix + "Powershell" + suffix}
         />
         <HexIcon
-          className="nginx third"
+          className="Nginx third"
           size={imgSize}
-          url={prefix + "nginx" + suffix}
+          url={prefix + "Nginx" + suffix}
         />
       </IconRow>
       <IconRow aria-label="third row">
         <HexIcon
-          className="githubactions second"
+          className="GithubActions second"
           size={imgSize}
-          url={prefix + "githubactions" + suffix}
+          url={prefix + "GithubActions" + suffix}
         />
         <HexIcon
-          className="tensorflow second"
+          className="TensorFlow second"
           size={imgSize}
-          url={prefix + "tensorflow" + suffix}
+          url={prefix + "TensorFlow" + suffix}
         />
         <HexIcon
-          className="aws first"
+          className="AWS first"
           size={imgSize}
-          url={prefix + "aws" + suffix}
+          url={prefix + "AWS" + suffix}
         />
         <HexIcon
-          className="markdown second"
+          className="Markdown second"
           size={imgSize}
-          url={prefix + "markdown" + suffix}
+          url={prefix + "Markdown" + suffix}
         />
         <HexIcon
-          className="cloudflare second"
+          className="Cloudflare second"
           size={imgSize}
-          url={prefix + "cloudflare" + suffix}
+          url={prefix + "Cloudflare" + suffix}
         />
       </IconRow>
       <IconRow aria-label="fourth row">
         <HexIcon
-          className="vuejs second"
+          className="VueJS second"
           size={imgSize}
-          url={prefix + "vuejs" + suffix}
+          url={prefix + "VueJS" + suffix}
         />
         <HexIcon
-          className="python first"
+          className="Python first"
           size={imgSize}
-          url={prefix + "python" + suffix}
+          url={prefix + "Python" + suffix}
         />
         <HexIcon
-          className="react first"
+          className="React first"
           size={imgSize}
-          url={prefix + "react" + suffix}
+          url={prefix + "React" + suffix}
         />
         <HexIcon
-          className="docker first"
+          className="Docker first"
           size={imgSize}
-          url={prefix + "docker" + suffix}
+          url={prefix + "Docker" + suffix}
         />
         <HexIcon
-          className="nodejs second"
+          className="NodeJS second"
           size={imgSize}
-          url={prefix + "nodejs" + suffix}
+          url={prefix + "NodeJS" + suffix}
         />
         <HexIcon
-          className="eclipse second"
+          className="Eclipse second"
           size={imgSize}
-          url={prefix + "eclipse" + suffix}
+          url={prefix + "Eclipse" + suffix}
         />
       </IconRow>
       <IconRow aria-label="fifth row">
         <HexIcon
-          className="gradle second"
+          className="Gradle second"
           size={imgSize}
-          url={prefix + "gradle" + suffix}
+          url={prefix + "Gradle" + suffix}
         />
         <HexIcon
-          className="devto first"
+          className="DevTo first"
           size={imgSize}
-          url={prefix + "devto" + suffix}
+          url={prefix + "DevTo" + suffix}
         />
         <HexIcon
-          className="java primary"
+          className="Java primary"
           size={imgSize}
-          url={prefix + "java" + suffix}
+          url={prefix + "Java" + suffix}
         />
         <HexIcon
-          className="spring first"
+          className="Spring first"
           size={imgSize}
-          url={prefix + "spring" + suffix}
+          url={prefix + "Spring" + suffix}
         />
         <HexIcon
-          className="materialui second"
+          className="MaterialUI second"
           size={imgSize}
-          url={prefix + "materialui" + suffix}
+          url={prefix + "MaterialUI" + suffix}
         />
       </IconRow>
       <IconRow aria-label="sixth row">
         <HexIcon
-          className="figma second"
+          className="Figma second"
           size={imgSize}
-          url={prefix + "figma" + suffix}
+          url={prefix + "Figma" + suffix}
         />
         <HexIcon
-          className="typescript first"
+          className="TypeScript first"
           size={imgSize}
-          url={prefix + "typescript" + suffix}
+          url={prefix + "TypeScript" + suffix}
         />
         <HexIcon
-          className="maven first"
+          className="Maven first"
           size={imgSize}
-          url={prefix + "maven" + suffix}
+          url={prefix + "Maven" + suffix}
         />
         <HexIcon
-          className="github first"
+          className="Github first"
           size={imgSize}
-          url={prefix + "github" + suffix}
+          url={prefix + "Github" + suffix}
         />
         <HexIcon
-          className="jenkins first"
+          className="Jenkins first"
           size={imgSize}
-          url={prefix + "jenkins" + suffix}
+          url={prefix + "Jenkins" + suffix}
         />
         <HexIcon
-          className="grafana second"
+          className="Grafana second"
           size={imgSize}
-          url={prefix + "grafana" + suffix}
+          url={prefix + "Grafana" + suffix}
         />
       </IconRow>
       <IconRow aria-label="seventh row">
         <HexIcon
-          className="postgresql second"
+          className="PostgreSQL second"
           size={imgSize}
-          url={prefix + "postgresql" + suffix}
+          url={prefix + "PostgreSQL" + suffix}
         />
         <HexIcon
-          className="linux first"
+          className="Linux first"
           size={imgSize}
-          url={prefix + "linux" + suffix}
+          url={prefix + "Linux" + suffix}
         />
         <HexIcon
-          className="cpp second"
+          className="CPP second"
           size={imgSize}
-          url={prefix + "cpp" + suffix}
+          url={prefix + "CPP" + suffix}
         />
         <HexIcon
-          className="kubernetes first"
+          className="Kubernetes first"
           size={imgSize}
-          url={prefix + "kubernetes" + suffix}
+          url={prefix + "Kubernetes" + suffix}
         />
         <HexIcon
-          className="rabbitmq second"
+          className="RabbitMQ second"
           size={imgSize}
-          url={prefix + "rabbitmq" + suffix}
+          url={prefix + "RabbitMQ" + suffix}
         />
       </IconRow>
       <IconRow aria-label="eighth row">
         <HexIcon
-          className="svg third"
+          className="SVG third"
           size={imgSize}
-          url={prefix + "svg" + suffix}
+          url={prefix + "SVG" + suffix}
         />
         <HexIcon
-          className="premiere second"
+          className="Premiere second"
           size={imgSize}
-          url={prefix + "premiere" + suffix}
+          url={prefix + "Premiere" + suffix}
         />
         <HexIcon
-          className="vscode second"
+          className="VSCode second"
           size={imgSize}
-          url={prefix + "vscode" + suffix}
+          url={prefix + "VSCode" + suffix}
         />
         <HexIcon
-          className="kotlin second"
+          className="Kotlin second"
           size={imgSize}
-          url={prefix + "kotlin" + suffix}
+          url={prefix + "Kotlin" + suffix}
         />
         <HexIcon
-          className="php third"
+          className="PHP third"
           size={imgSize}
-          url={prefix + "php" + suffix}
+          url={prefix + "PHP" + suffix}
         />
         <HexIcon
-          className="gcp third"
+          className="GCP third"
           size={imgSize}
-          url={prefix + "gcp" + suffix}
+          url={prefix + "GCP" + suffix}
         />
       </IconRow>
       <IconRow aria-label="ninth row">
         <HexIcon
-          className="postman third"
+          className="Postman third"
           size={imgSize}
-          url={prefix + "postman" + suffix}
+          url={prefix + "Postman" + suffix}
         />
         <HexIcon
           className="R third"
@@ -926,19 +926,19 @@ const MobileAnimation = (grandparent: { handleStateFunction: () => void }) => {
           url={prefix + "R" + suffix}
         />
         <HexIcon
-          className="unity third"
+          className="Unity third"
           size={imgSize}
-          url={prefix + "unity" + suffix}
+          url={prefix + "Unity" + suffix}
         />
         <HexIcon
-          className="coffeescript third"
+          className="CoffeeScript third"
           size={imgSize}
-          url={prefix + "coffeescript" + suffix}
+          url={prefix + "CoffeeScript" + suffix}
         />
         <HexIcon
-          className="discord third"
+          className="Discord third"
           size={imgSize}
-          url={prefix + "discord" + suffix}
+          url={prefix + "Discord" + suffix}
         />
       </IconRow>
     </Box>
