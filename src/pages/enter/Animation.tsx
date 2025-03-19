@@ -10,7 +10,7 @@ import { useGSAP } from "@gsap/react";
  * 3. 애니메이션이 썩 유쾌하지 않음
  */
 const prefix = "stackIcons/";
-const suffix = "-Dark.SVG";
+const suffix = "-Dark.svg";
 
 const IconRow = styled(Box)(() => ({
   position: "relative",
