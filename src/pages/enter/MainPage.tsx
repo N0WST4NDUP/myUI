@@ -2,7 +2,7 @@ import * as React from "react";
 import NavBar from "widgets/nav/NavBar";
 import FABs from "widgets/nav/FABs";
 
-const EnterSite = () => {
+const MainPage = () => {
   return (
     <React.Fragment>
       <NavBar />
@@ -11,4 +11,4 @@ const EnterSite = () => {
   );
 };
 
-export default EnterSite;
+export default MainPage;

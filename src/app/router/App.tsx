@@ -1,17 +1,25 @@
 import * as React from "react";
-import Container from "@mui/material/Container";
 import { Route, Routes } from "react-router-dom";
+import { useColorScheme, Container } from "@mui/material";
 import Error40X from "pages/error/Error40X";
-import EnterSite from "pages/enter/EnterSite";
-import { useColorScheme } from "@mui/material";
-import Animation from "pages/enter/Animation";
+const Animation = React.lazy(() => import("pages/enter/Animation"));
+import MainPage from "pages/enter/MainPage";
+import Loading from "shared/components/Loading";
 
 const App = () => {
   const { setMode } = useColorScheme();
+  const [hasVisited, setHasVisited] = React.useState(
+    () => sessionStorage.getItem("hasVisited") === "true"
+  );
 
   React.useEffect(() => {
     setMode("light");
   }, []);
+
+  function handleVisited() {
+    setHasVisited(true);
+    sessionStorage.setItem("hasVisited", "true");
+  }
 
   return (
     <Container
@@ -21,8 +29,18 @@ const App = () => {
       }}
     >
       <Routes>
-        <Route path="/" element={<EnterSite />} />
-        <Route path="/anime" element={<Animation />} />
+        <Route
+          path="/"
+          element={
+            hasVisited ? (
+              <MainPage />
+            ) : (
+              <React.Suspense fallback={<Loading />}>
+                <Animation handleStateFunction={handleVisited} />
+              </React.Suspense>
+            )
+          }
+        />
         <Route path="*" element={<Error40X />} />
       </Routes>
     </Container>

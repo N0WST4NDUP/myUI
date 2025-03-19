@@ -21,16 +21,20 @@ const IconRow = styled(Box)(() => ({
   marginTop: -16,
 }));
 
-const Animation = () => {
+const Animation = (parent: { handleStateFunction: () => void }) => {
   const [isMobile] = React.useState(/Mobi/i.test(window.navigator.userAgent));
 
-  return isMobile ? <MobileAnimation /> : <DefaultAnimation />;
+  return isMobile ? (
+    <MobileAnimation handleStateFunction={parent.handleStateFunction} />
+  ) : (
+    <DefaultAnimation handleStateFunction={parent.handleStateFunction} />
+  );
 };
 
 // GSAP 쓴 컴포넌트 입니다.
 gsap.registerPlugin(useGSAP);
 
-const DefaultAnimation = () => {
+const DefaultAnimation = (grandparent: { handleStateFunction: () => void }) => {
   const imgSize = 100;
   const container = React.useRef<HTMLDivElement>(null);
 
@@ -46,7 +50,7 @@ const DefaultAnimation = () => {
           scale: 2,
         },
         {
-          duration: 4.5,
+          duration: 5,
           scale: 1.2,
           delay: 2,
         }
@@ -55,6 +59,7 @@ const DefaultAnimation = () => {
         duration: 0.5,
         scale: 3,
         opacity: 0,
+        onComplete: grandparent.handleStateFunction,
       });
 
     iconsTL1
@@ -78,7 +83,7 @@ const DefaultAnimation = () => {
     iconsTL2
       .from(".first", {
         delay: 2,
-        duration: 1.3,
+        duration: 1.2,
         opacity: 0,
         stagger: { each: 0.1, from: "random" },
       })
@@ -602,7 +607,7 @@ const DefaultAnimation = () => {
   );
 };
 
-const MobileAnimation = () => {
+const MobileAnimation = (grandparent: { handleStateFunction: () => void }) => {
   const imgSize = 100;
   const container = React.useRef<HTMLDivElement>(null);
 
@@ -627,6 +632,7 @@ const MobileAnimation = () => {
         duration: 0.5,
         scale: 3,
         opacity: 0,
+        onComplete: grandparent.handleStateFunction,
       });
 
     iconsTL1
