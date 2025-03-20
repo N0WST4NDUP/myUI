@@ -22,10 +22,14 @@ const FABs = () => {
       rotation: "+=180",
     });
     gsap.to(".fab", {
-      duration: 0.3,
-      y: open ? 0 : 32,
+      duration: 0.2,
+      y: open ? 0 : 48,
       opacity: open ? 1 : 0,
       display: open ? "flex" : "none",
+      stagger: {
+        from: open ? "end" : "start",
+        each: 0.15,
+      },
     });
   }, [open]);
 
