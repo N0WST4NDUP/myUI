@@ -265,7 +265,7 @@ export const colorSchemes = {
       divider: alpha(gray[300], 0.4),
       background: {
         default: "hsl(0, 0%, 99%)",
-        paper: "hsl(220, 35%, 97%)",
+        paper: "hsl(220, 35%, 93%)",
       },
       text: {
         primary: gray[800],
@@ -315,7 +315,7 @@ export const colorSchemes = {
       divider: alpha(gray[700], 0.6),
       background: {
         default: gray[900],
-        paper: "hsl(220, 30%, 7%)",
+        paper: "hsl(220, 30%, 15%)",
       },
       text: {
         primary: "hsl(0, 0%, 100%)",
@@ -334,15 +334,16 @@ export const colorSchemes = {
 export const typography = {
   fontFamily: "Inter, sans-serif",
   h1: {
+    fontSize: defaultTheme.typography.pxToRem(72),
+    fontWeight: 600,
+    lineHeight: 1.2,
+    letterSpacing: -3,
+  },
+  h2: {
     fontSize: defaultTheme.typography.pxToRem(48),
     fontWeight: 600,
     lineHeight: 1.2,
-    letterSpacing: -0.5,
-  },
-  h2: {
-    fontSize: defaultTheme.typography.pxToRem(36),
-    fontWeight: 600,
-    lineHeight: 1.2,
+    letterSpacing: -2,
   },
   h3: {
     fontSize: defaultTheme.typography.pxToRem(30),
@@ -362,10 +363,10 @@ export const typography = {
     fontWeight: 600,
   },
   subtitle1: {
-    fontSize: defaultTheme.typography.pxToRem(18),
+    fontSize: defaultTheme.typography.pxToRem(36),
   },
   subtitle2: {
-    fontSize: defaultTheme.typography.pxToRem(14),
+    fontSize: defaultTheme.typography.pxToRem(18),
     fontWeight: 500,
   },
   body1: {

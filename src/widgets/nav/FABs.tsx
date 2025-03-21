@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box, IconButton, styled, Tooltip } from "@mui/material";
-import { Email, KeyboardArrowUp, Textsms } from "@mui/icons-material";
+import { Email, KeyboardArrowDown, Textsms } from "@mui/icons-material";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -13,13 +13,13 @@ const FAB = styled(IconButton)(({ theme }) => ({
   // boxShadow: theme.palette.baseShadow,
 }));
 
-const FABs = () => {
+const FABs = (props: { className?: string }) => {
   const [open, setOpen] = React.useState(true);
 
   useGSAP(() => {
     gsap.to(".dropdown", {
       duration: 0.5,
-      rotation: "+=180",
+      rotation: open ? 0 : 180,
     });
     gsap.to(".fab", {
       duration: 0.2,
@@ -39,6 +39,7 @@ const FABs = () => {
 
   return (
     <Box
+      className={props.className}
       sx={{
         position: "fixed",
         right: 18,
@@ -73,7 +74,7 @@ const FABs = () => {
         </FAB>
       </Tooltip>
       <FAB className="dropdown" onClick={handleClick} size="large">
-        <KeyboardArrowUp />
+        <KeyboardArrowDown />
       </FAB>
     </Box>
   );

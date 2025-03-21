@@ -26,13 +26,14 @@ const SyledButton = styled(Button)(({ theme }) => ({
   letterSpacing: "-0.05em",
 }));
 
-const NavBar = (props: { display?: string }) => {
+const NavBar = (props: { className?: string }) => {
   return (
     <AppBar
+      className={props.className}
       enableColorOnDark
       sx={{
         position: "fixed",
-        display: props.display || "flex",
+        display: "flex",
         flexDirection: "row",
         justifyContent: "center",
         gap: { xs: 2, sm: 6 },

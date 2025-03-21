@@ -630,7 +630,7 @@ const MobileAnimation = (grandparent: { handleStateFunction: () => void }) => {
         }
       )
       .to(".icon", {
-        duration: 0.2,
+        duration: 0.3,
         opacity: 0,
         rotateY: 90,
         stagger: { each: 0.05, from: "center", grid: "auto" },
