@@ -1,14 +1,16 @@
 import * as React from "react";
 import NavBar from "widgets/nav/NavBar";
 import FABs from "widgets/nav/FABs";
+import Slogan from "shared/components/Slogan";
+import MyDoubleArrow from "shared/components/MyDoubleArrow";
 import { Box, Typography, useTheme } from "@mui/material";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Slogan from "shared/components/Slogan";
 
 gsap.registerPlugin(useGSAP);
 
-const MainPage = () => {
+const Enter = (props: { handleStateFunction?: () => void }) => {
+  const theme = useTheme();
   const tl = gsap.timeline();
 
   useGSAP(() => {
@@ -20,6 +22,7 @@ const MainPage = () => {
     }).to(".title", {
       duration: 0.5,
       opacity: 0,
+      onComplete: props.handleStateFunction,
     });
 
     tl.from(".myName", {
@@ -36,10 +39,18 @@ const MainPage = () => {
       "<"
     );
 
-    tl.from(".mySlogans", {
-      duration: 2,
+    tl.from(".myPhoto", {
+      duration: 1,
       opacity: 0,
     })
+      .from(
+        ".mySlogans",
+        {
+          duration: 2,
+          opacity: 0,
+        },
+        "<"
+      )
       .from(
         ".nav",
         {
@@ -62,9 +73,43 @@ const MainPage = () => {
 
   return (
     <>
-      <NavBar className="nav" />
       <Title />
+      <NavBar className="nav" />
       <FABs className="fabs" />
+      <Box
+        className="myPhoto"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          width: "100%",
+          mt: "100vh",
+        }}
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            width: { xs: "100%", sm: 450 },
+            height: 450,
+            bottom: 0,
+          }}
+        >
+          <img
+            src="/myPhoto.png"
+            alt="myPhoto"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              objectPosition: "bottom",
+              marginLeft: -12,
+              filter: `drop-shadow(0 2px 4px ${theme.palette.primary.dark})`,
+            }}
+          />
+        </Box>
+        <MyDoubleArrow
+          sx={{ position: "absolute", bottom: 0, color: "white" }}
+        />
+      </Box>
     </>
   );
 };
@@ -153,4 +198,4 @@ const Title = () => {
   );
 };
 
-export default MainPage;
+export default Enter;

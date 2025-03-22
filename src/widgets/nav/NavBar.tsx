@@ -45,6 +45,7 @@ const NavBar = (props: { className?: string }) => {
           xs: `calc(var(--template-frame-height, 0px) + 16px)`,
           sm: `calc(var(--template-frame-height, 0px) + 24px)`,
         },
+        zIndex: -1,
       }}
     >
       <SyledButton

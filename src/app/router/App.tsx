@@ -3,8 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import { useColorScheme, Container } from "@mui/material";
 import Error40X from "pages/error/Error40X";
 const Animation = React.lazy(() => import("pages/enter/Animation"));
-import MainPage from "pages/enter/MainPage";
 import Loading from "shared/components/Loading";
+import MainPage from "pages/main/MainPage";
+import AboutMe from "pages/aboutMe/AboutMe";
 
 const App = () => {
   const { setMode } = useColorScheme();
@@ -53,6 +54,7 @@ const App = () => {
             )
           }
         />
+        <Route path="/about" element={<AboutMe />} />
         <Route path="*" element={<Error40X />} />
       </Routes>
     </Container>

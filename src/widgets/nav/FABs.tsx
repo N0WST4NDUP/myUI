@@ -8,9 +8,9 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 const FAB = styled(IconButton)(({ theme }) => ({
+  backgroundColor: theme.palette.background.default,
   color: theme.palette.text.primary,
   border: `1px solid ${theme.palette.divider}`,
-  // boxShadow: theme.palette.baseShadow,
 }));
 
 const FABs = (props: { className?: string }) => {
@@ -42,6 +42,7 @@ const FABs = (props: { className?: string }) => {
       className={props.className}
       sx={{
         position: "fixed",
+        zIndex: 1,
         right: 18,
         bottom: 24,
         display: "flex",
