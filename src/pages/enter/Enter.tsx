@@ -4,10 +4,11 @@ import FABs from "widgets/nav/FABs";
 import Slogan from "shared/components/Slogan";
 import MyDoubleArrow from "shared/components/MyDoubleArrow";
 import { Box, Typography, useTheme } from "@mui/material";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Enter = (props: { handleStateFunction?: () => void }) => {
   const theme = useTheme();
@@ -39,7 +40,7 @@ const Enter = (props: { handleStateFunction?: () => void }) => {
       "<"
     );
 
-    tl.from(".myPhoto", {
+    tl.from(".photoBox", {
       duration: 1,
       opacity: 0,
     })
@@ -77,24 +78,25 @@ const Enter = (props: { handleStateFunction?: () => void }) => {
       <NavBar className="nav" />
       <FABs className="fabs" />
       <Box
-        className="myPhoto"
+        className="photoBox"
         sx={{
           display: "flex",
           justifyContent: "center",
           width: "100%",
-          mt: "100vh",
+          mt: "100lvh",
         }}
       >
         <Box
+          className="myPhoto"
           sx={{
-            position: "absolute",
+            position: "fixed",
             width: { xs: "100%", sm: 450 },
             height: 450,
             bottom: 0,
           }}
         >
           <img
-            src="/myPhoto.png"
+            src="/imgs/myPhoto.png"
             alt="myPhoto"
             style={{
               width: "100%",
@@ -107,7 +109,7 @@ const Enter = (props: { handleStateFunction?: () => void }) => {
           />
         </Box>
         <MyDoubleArrow
-          sx={{ position: "absolute", bottom: 0, color: "white" }}
+          sx={{ position: "absolute", top: "93svh", color: "white" }}
         />
       </Box>
     </>
@@ -123,8 +125,8 @@ const Title = () => {
         position: "fixed",
         top: 0,
         left: 0,
-        width: "100vw",
-        height: "100vh",
+        width: "100svw",
+        height: "100svh",
         background: "none",
         zIndex: -1,
         display: "flex",

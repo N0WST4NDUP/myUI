@@ -188,6 +188,7 @@ export const getDesignTokens = (mode: PaletteMode) => {
       },
       h3: {
         fontSize: defaultTheme.typography.pxToRem(30),
+        fontWeight: 600,
         lineHeight: 1.2,
       },
       h4: {
@@ -211,7 +212,7 @@ export const getDesignTokens = (mode: PaletteMode) => {
         fontWeight: 500,
       },
       body1: {
-        fontSize: defaultTheme.typography.pxToRem(14),
+        fontSize: defaultTheme.typography.pxToRem(12),
       },
       body2: {
         fontSize: defaultTheme.typography.pxToRem(14),
@@ -334,8 +335,8 @@ export const colorSchemes = {
 export const typography = {
   fontFamily: "Inter, sans-serif",
   h1: {
-    fontSize: defaultTheme.typography.pxToRem(72),
-    fontWeight: 600,
+    fontSize: defaultTheme.typography.pxToRem(80),
+    fontWeight: 700,
     lineHeight: 1.2,
     letterSpacing: -3,
   },
@@ -383,7 +384,7 @@ export const typography = {
 };
 
 export const shape = {
-  borderRadius: 8,
+  borderRadius: 3,
 };
 
 // @ts-expect-error: 허용된 오류
