@@ -83,7 +83,7 @@ const Enter = (props: { handleStateFunction?: () => void }) => {
           display: "flex",
           justifyContent: "center",
           width: "100%",
-          mt: "100lvh",
+          mt: "100svh",
         }}
       >
         <Box
@@ -172,6 +172,8 @@ const Title = () => {
           top: { xs: 108, sm: 96 },
           display: "flex",
           flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <Typography
@@ -179,7 +181,7 @@ const Title = () => {
           variant="h1"
           sx={{
             color: theme.palette.background.paper,
-            fontSize: { xs: "50px", sm: "72px" },
+            fontSize: { xs: "50px", sm: "80px" },
           }}
         >
           Full-Stack Dev
@@ -188,13 +190,13 @@ const Title = () => {
           className="myName"
           variant="subtitle1"
           sx={{
-            mt: { xs: -3.5, sm: -5 },
-            fontSize: { xs: "24px", sm: "36px" },
+            mt: { xs: -4, sm: -6 },
+            fontSize: { xs: "24px", sm: "40px" },
           }}
         >
           풀스택 개발자 <b>이재서</b>입니다.
         </Typography>
-        <Slogan sx={{ mt: { xs: "10%", sm: 3 } }} />
+        <Slogan sx={{ width: "100%", mt: { xs: "10%", sm: 3 } }} />
       </Box>
     </Box>
   );

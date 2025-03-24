@@ -1,8 +1,13 @@
 import * as React from "react";
-import { Box, Button, Typography, useTheme } from "@mui/material";
+import { Box, Button, Divider, Typography, useTheme } from "@mui/material";
 import { PersonSearch } from "@mui/icons-material";
 
 const hashtags: string[] = ["#따듯한로봇", "#팀메이커", "#인간물음표"];
+const interviews = [
+  { question: "개발자가 된 이유", answer: "123123" },
+  { question: "업무에서 중요하게 생각하는 것", answer: "123123" },
+  { question: "AI에 대해서 어떻게 생각하는 지", answer: "123123" },
+];
 
 const AboutMe = (props: { sx?: object }) => {
   const theme = useTheme();
@@ -12,7 +17,6 @@ const AboutMe = (props: { sx?: object }) => {
       sx={{
         position: "relative",
         width: "100%",
-        height: "100lvh",
         backgroundColor: theme.palette.background.default,
         borderTop: `3px solid ${theme.palette.divider}`,
         padding: { xs: 2, sm: 4 },
@@ -84,22 +88,26 @@ const AboutMe = (props: { sx?: object }) => {
         >
           Interview
         </Typography>
-        <Box
-          sx={{
-            width: "100%",
-            height: 200,
-            backgroundColor: theme.palette.background.paper,
-            borderRadius: theme.shape.borderRadius,
-          }}
-        />
-        <Box
-          sx={{
-            width: "100%",
-            height: 200,
-            backgroundColor: theme.palette.background.paper,
-            borderRadius: theme.shape.borderRadius,
-          }}
-        />
+        {interviews.map((interview, index) => (
+          <Box
+            key={index}
+            sx={{
+              width: "100%",
+              backgroundColor: theme.palette.background.paper,
+              borderRadius: theme.shape.borderRadius,
+              display: "flex",
+              flexDirection: "column",
+              padding: { xs: 1, sm: 2 },
+              gap: 1,
+            }}
+          >
+            <Typography variant="h3" sx={{ fontSize: { xs: 12, sm: 24 } }}>
+              Q{index + 1}. {interview.question}
+            </Typography>
+            <Divider />
+            <Typography variant="body1">{interview.answer}</Typography>
+          </Box>
+        ))}
       </Box>
     </Box>
   );

@@ -165,11 +165,11 @@ export const getDesignTokens = (mode: PaletteMode) => {
         }),
       },
       action: {
-        hover: alpha(gray[200], 0.2),
-        selected: `${alpha(gray[200], 0.3)}`,
+        hover: gray[200],
+        selected: gray[200],
         ...(mode === "dark" && {
-          hover: alpha(gray[600], 0.2),
-          selected: alpha(gray[600], 0.3),
+          hover: gray[600],
+          selected: gray[600],
         }),
       },
     },
@@ -274,8 +274,8 @@ export const colorSchemes = {
         warning: orange[400],
       },
       action: {
-        hover: alpha(gray[200], 0.2),
-        selected: `${alpha(gray[200], 0.3)}`,
+        hover: gray[200],
+        selected: gray[200],
       },
       baseShadow:
         "hsla(220, 30%, 5%, 0.07) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.07) 0px 8px 16px -5px",
@@ -323,8 +323,8 @@ export const colorSchemes = {
         secondary: gray[400],
       },
       action: {
-        hover: alpha(gray[600], 0.2),
-        selected: alpha(gray[600], 0.3),
+        hover: gray[600],
+        selected: gray[600],
       },
       baseShadow:
         "hsla(220, 30%, 5%, 0.7) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.8) 0px 8px 16px -5px",
@@ -333,7 +333,7 @@ export const colorSchemes = {
 };
 
 export const typography = {
-  fontFamily: "Inter, sans-serif",
+  fontFamily: "Pretendard Variable",
   h1: {
     fontSize: defaultTheme.typography.pxToRem(80),
     fontWeight: 700,
@@ -348,7 +348,8 @@ export const typography = {
   },
   h3: {
     fontSize: defaultTheme.typography.pxToRem(30),
-    lineHeight: 1.2,
+    fontWeight: 700,
+    lineHeight: 1.4,
   },
   h4: {
     fontSize: defaultTheme.typography.pxToRem(24),
@@ -371,10 +372,10 @@ export const typography = {
     fontWeight: 500,
   },
   body1: {
-    fontSize: defaultTheme.typography.pxToRem(14),
+    fontSize: defaultTheme.typography.pxToRem(12),
   },
   body2: {
-    fontSize: defaultTheme.typography.pxToRem(14),
+    fontSize: defaultTheme.typography.pxToRem(12),
     fontWeight: 400,
   },
   caption: {

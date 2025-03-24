@@ -42,7 +42,7 @@ export const HexIcon = (props: framesProps) => {
             </clipPath>
           </defs>
           <image
-            href={props.url}
+            xlinkHref={props.url}
             x="5"
             y="5"
             width="90"
